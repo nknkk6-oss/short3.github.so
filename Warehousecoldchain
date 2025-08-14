@@ -1,0 +1,41 @@
+SKU location heatmap example 
+
+cold chain picker data.
+
+This is useful because in dark store or cold storage, certain SKUs (e.g., cream cheese, frozen bakery) will appear in picks more often and you want to place them for shortest walking distance.
+
+What the Data Looks Like
+
+From your NAVISION (Warehouse Activity Line) picker logs: REFER TABLE AS ENCLOSED
+
+Heat map Idea
+
+X-axis: Rack/Bin location
+Y-axis: Number of picks
+Color: High = Red, Medium = Yellow, Low = Green
+
+The heat map visually tells you:
+
+Which bins see the most picking activity
+
+Which SKUs should be closer to your “start zone” to reduce travel time
+
+Example Heatmap (concept)
+
+Rack Zone	  A1	      A2	   A3    A4
+CH-01	     🔴140🟡90🟠65🟢20
+CH-02	     🟡95 🟢25 🟢10 🟢15
+FZ-01	     🟠80 🟢15	 🟢10 🟢8
+FZ-03	     🟢12  🟢20🟢18 🟡40
+
+Legend:
+🔴 High frequency (Top 20% of picks)
+🟠 Medium-high (20–50%)
+🟡 Medium-low (50–80%)
+🟢 Low (Bottom 20%)
+
+How to Use It
+
+Slotting Optimization: Move 🔴 and 🟠 bins closer to the picker’s starting point.
+Batch Picking Routes: Prioritize high-frequency zones early in the route.
+Replenishment Planning: Ensure high-frequency bins are replenished during low-traffic times.
